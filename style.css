@@ -1,0 +1,203 @@
+body {
+    background-color: #1a1a1a;
+    color: #f0f0f0; /* Une nuance de blanc cassé pour un meilleur confort de lecture. */
+     text-align: center;
+}
+
+h1, h2, h3 {
+    color: #00bfff; /* Un bleu ciel vif, tu peux choisir la couleur que tu veux. */
+}
+
+section {
+    padding: 50px 0; /* Ajoute 50 pixels d'espace en haut et en bas. */
+    margin-bottom: 30px; /* Ajoute 30 pixels d'espace en bas de chaque section. */
+}
+
+a {
+    background-color: #00bfff; /* Couleur de fond du bouton */
+    color: #1a1a1a; /* Couleur du texte */
+    padding: 10px 20px; /* Espace intérieur (haut/bas, gauche/droite) */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    border-radius: 5px; /* Arrondit les coins */
+    display: inline-block; /* Permet d'appliquer le padding */
+    font-weight: bold; /* Texte en gras */
+    text-transform: uppercase; /* Met le texte en majuscules */
+}
+
+a:hover {
+    background-color: #0099cc; /* Une couleur de fond légèrement plus foncée */
+}
+
+img {
+    border-radius: 50%;
+    border: 3px solid #00bfff; /* Une bordure de 3px de large de couleur bleue */
+}
+.projets {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.projets div {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px; /* On va donner une largeur fixe pour l'instant */
+    margin-bottom: 20px;
+}
+
+.competences {
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 50px; /* Ajoute un espace de 50px entre les deux blocs */
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #2a2a2a;
+    border: none;
+    border-radius: 5px;
+    color: #f0f0f0;
+}
+
+input[type="submit"] {
+    background-color: #00bfff;
+    color: #1a1a1a;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+input[type="submit"] {
+    background-color: #00bfff;
+    color: #1a1a1a;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.apropos-contenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between; /* Pour espacer les champs de manière égale */
+    gap: 20px; /* Ajoute de l'espace entre les deux champs */
+}
+
+.form-group {
+    flex-grow: 1; /* Permet aux champs de prendre tout l'espace disponible */
+    margin-bottom: 20px;
+}
+
+label {
+    display: block; /* S'assure que chaque label est sur sa propre ligne */
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border: none;
+    border-radius: 5px;
+    color: #f0f0f0;
+}
+
+
+input[type="submit"] {
+    background-color: #00bfff;
+    color: #1a1a1a;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0099cc;
+}
+
+.projets-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux blocs de passer à la ligne */
+    justify-content: center; /* Centre la grille horizontalement */
+    gap: 30px; /* Ajoute un espace entre les cartes */
+}
+
+.projet-card {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px; /* Largeur fixe pour chaque carte */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+    text-align: left; /* Aligne le texte à gauche pour une meilleure lisibilité */
+}
+
+.projet-card img {
+    width: 100%; /* L'image prend toute la largeur de la carte */
+    border-radius: 10px; /* Arrondit les coins de l'image */
+    margin-bottom: 15px; /* Espace entre l'image et le titre */
+}
+
+.projet-card h3 {
+    margin-top: 0; /* Supprime la marge par défaut en haut */
+    color: #00bfff; /* Même couleur que les titres principaux */
+}
+
+.projet-card p {
+    color: #ccc; /* Une couleur de texte plus claire pour la description */
+    line-height: 1.5; /* Améliore la lisibilité */
+}
+
+.projet-card a {
+    display: inline-block; /* Permet d'appliquer le padding */
+    margin-top: 10px; /* Espace au-dessus du lien */
+}
+
+.projet-card a:hover {
+    background-color: #0099cc; /* Même effet hover que les autres boutons */
+}
+
+/* Styles pour la page mesprojets.html */
+
+.contact-infos {
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+.contact-infos h3 {
+    margin-top: 0;
+    color: #00bfff;
+}
+.contact-infos p {
+    color: #ccc;
+    line-height: 1.5;
+}
+.contact-infos a {
+    color: #00bfff;
+    text-decoration: none;
+}
+.contact-infos a:hover {
+    text-decoration: underline;
+}
+/* Styles pour la page mesprojets.html */
