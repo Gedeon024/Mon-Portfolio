@@ -1,37 +1,42 @@
 body {
-    background-color: #1a1a1a;
-    color: #f0f0f0; /* Une nuance de blanc cassé pour un meilleur confort de lecture. */
-     text-align: center;
+    background-color: #e4dbdb;
+    color: #0a0909;
+    text-align: center;
 }
 
 h1, h2, h3 {
-    color: #00bfff; /* Un bleu ciel vif, tu peux choisir la couleur que tu veux. */
+    color: #00bfff;
 }
 
 section {
-    padding: 50px 0; /* Ajoute 50 pixels d'espace en haut et en bas. */
-    margin-bottom: 30px; /* Ajoute 30 pixels d'espace en bas de chaque section. */
+    padding: 50px 0;
+    margin-bottom: 30px;
 }
 
+/* Styles pour les liens et les boutons */
 a {
-    background-color: #00bfff; /* Couleur de fond du bouton */
-    color: #1a1a1a; /* Couleur du texte */
-    padding: 10px 20px; /* Espace intérieur (haut/bas, gauche/droite) */
-    text-decoration: none; /* Supprime le soulignement du lien */
-    border-radius: 5px; /* Arrondit les coins */
-    display: inline-block; /* Permet d'appliquer le padding */
-    font-weight: bold; /* Texte en gras */
-    text-transform: uppercase; /* Met le texte en majuscules */
+    display: inline-block;
+    background-color: #00bfff;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 a:hover {
-    background-color: #0099cc; /* Une couleur de fond légèrement plus foncée */
+    background-color: #0099cc;
+    transform: scale(1.05);
 }
 
 img {
     border-radius: 50%;
-    border: 3px solid #00bfff; /* Une bordure de 3px de large de couleur bleue */
+    border: 3px solid #00bfff;
 }
+
+/* Styles pour la section "Projets" */
 .projets {
     display: flex;
     justify-content: space-around;
@@ -39,86 +44,31 @@ img {
 }
 
 .projets div {
-    background-color: #2a2a2a;
+    background-color: #e1d0d0;
     padding: 20px;
     border-radius: 10px;
-    width: 300px; /* On va donner une largeur fixe pour l'instant */
+    width: 300px;
     margin-bottom: 20px;
 }
 
+/* Styles pour la section "Compétences" */
 .competences {
     display: flex;
-    justify-content: center; /* Centre les éléments horizontalement */
-    gap: 50px; /* Ajoute un espace de 50px entre les deux blocs */
-}
-
-input[type="text"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: #2a2a2a;
-    border: none;
-    border-radius: 5px;
-    color: #f0f0f0;
-}
-
-input[type="submit"] {
-    background-color: #00bfff;
-    color: #1a1a1a;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-input[type="submit"] {
-    background-color: #00bfff;
-    color: #1a1a1a;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-
-.apropos-contenu {
-    display: flex;
     justify-content: center;
-    align-items: center;
     gap: 50px;
 }
 
-.form-row {
-    display: flex;
-    justify-content: space-between; /* Pour espacer les champs de manière égale */
-    gap: 20px; /* Ajoute de l'espace entre les deux champs */
-}
-
-.form-group {
-    flex-grow: 1; /* Permet aux champs de prendre tout l'espace disponible */
-    margin-bottom: 20px;
-}
-
-label {
-    display: block; /* S'assure que chaque label est sur sa propre ligne */
-    margin-bottom: 5px;
-}
-
+/* Styles pour les formulaires de contact */
 input[type="text"],
 textarea {
     width: 100%;
     padding: 10px;
-    background-color: #2a2a2a;
+    margin-bottom: 20px;
+    background-color: #f3ecec;
     border: none;
     border-radius: 5px;
-    color: #f0f0f0;
+    color: #000000;
 }
-
 
 input[type="submit"] {
     background-color: #00bfff;
@@ -130,74 +80,164 @@ input[type="submit"] {
     text-transform: uppercase;
     font-weight: bold;
     margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
     background-color: #0099cc;
 }
 
+.apropos-contenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-group {
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Styles pour la grille de projets */
 .projets-grid {
     display: flex;
-    flex-wrap: wrap; /* Permet aux blocs de passer à la ligne */
-    justify-content: center; /* Centre la grille horizontalement */
-    gap: 30px; /* Ajoute un espace entre les cartes */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
 .projet-card {
-    background-color: #2a2a2a;
+    background-color: #cfbcbc;
     padding: 20px;
     border-radius: 10px;
-    width: 300px; /* Largeur fixe pour chaque carte */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
-    text-align: left; /* Aligne le texte à gauche pour une meilleure lisibilité */
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(66, 65, 65, 0.2);
 }
 
 .projet-card img {
-    width: 100%; /* L'image prend toute la largeur de la carte */
-    border-radius: 10px; /* Arrondit les coins de l'image */
-    margin-bottom: 15px; /* Espace entre l'image et le titre */
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .projet-card h3 {
-    margin-top: 0; /* Supprime la marge par défaut en haut */
-    color: #00bfff; /* Même couleur que les titres principaux */
-}
-
-.projet-card p {
-    color: #ccc; /* Une couleur de texte plus claire pour la description */
-    line-height: 1.5; /* Améliore la lisibilité */
-}
-
-.projet-card a {
-    display: inline-block; /* Permet d'appliquer le padding */
-    margin-top: 10px; /* Espace au-dessus du lien */
-}
-
-.projet-card a:hover {
-    background-color: #0099cc; /* Même effet hover que les autres boutons */
-}
-
-/* Styles pour la page mesprojets.html */
-
-.contact-infos {
-    background-color: #2a2a2a;
-    padding: 30px;
-    border-radius: 10px;
-    margin-bottom: 50px;
-}
-.contact-infos h3 {
     margin-top: 0;
     color: #00bfff;
 }
-.contact-infos p {
-    color: #ccc;
+
+.projet-card p {
+    color: #020202;
     line-height: 1.5;
 }
-.contact-infos a {
-    color: #00bfff;
+
+/* Styles pour le contact */
+.contact-infos {
+    background-color: #7b7474;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: left;
+    display: inline-block;
+}   
+
+/* Styles pour la photo de profil */
+.header-image img {
+    border-radius: 50%; /* Rends l'image ronde */
+    width: 200px; /* Ajuste la taille de l'image */
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid #00bfff; /* Ajoute une bordure */
+}
+
+/* Styles pour les autres images (par exemple, les projets) */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Évite les espaces sous l'image */
+}
+
+/* Section dédiée à la photo de profil en haut de la page */
+.profil-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.profil-header img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 4px solid #00bfff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    margin-bottom: 15px;
+}
+
+/* Barre de compétences */
+.skill-bar-container {
+    margin-bottom: 15px;
+}
+
+.skill-bar {
+    background-color: #e4dbdb;
+    border-radius: 10px;
+    height: 18px;
+    width: 200px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    display: block;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    border-radius: 10px;
+    width: 0;
+    transition: width 1.2s ease, transform 0.2s;
+}
+
+.skill-bar-fill.html {
+    background-color: #00bfff;
+}
+
+.skill-bar-fill.css {
+    background-color: #0099cc;
+}
+
+.skill-bar-fill.js {
+    background-color: #ffb300;
+}
+
+header nav a {
+    margin: 0 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1a1a1a;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
-.contact-infos a:hover {
-    text-decoration: underline;
-}
-/* Styles pour la page mesprojets.html */
+header nav a:hover {
+    color: #00bfff;
+}   
