@@ -6,6 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio - Mes Projets</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        header {
+            background: #22223b;
+            box-shadow: 0 2px 8px rgba(60,60,120,0.07);
+            padding: 1rem 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+        nav a {
+            color: #f4f4f9;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav a:hover, nav a.active {
+            background: #4f8cff;
+            color: #fff;
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            nav a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
