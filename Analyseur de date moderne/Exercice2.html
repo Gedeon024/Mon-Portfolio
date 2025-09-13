@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyseur de Dates Moderne</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0e7ff 0%, #f4f4f9 100%);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: #fff;
+            padding: 2.5rem 2rem;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(60, 60, 120, 0.15);
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        h1 {
+            color: #3b3b6d;
+            margin-bottom: 1.2rem;
+            font-size: 1.7rem;
+            letter-spacing: 1px;
+        }
+        .results {
+            text-align: left;
+            margin-top: 1.2rem;
+        }
+        .results p {
+            background: #eef2ff;
+            padding: 12px 14px;
+            border-left: 4px solid #6366f1;
+            border-radius: 7px;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background 0.3s;
+        }
+        .results p strong {
+            color: #3b3b6d;
+        }
+        form {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        label {
+            font-weight: 500;
+            color: #6366f1;
+            margin-bottom: 0.3rem;
+        }
+        input[type="date"] {
+            padding: 0.7rem;
+            border: 1px solid #c7d2fe;
+            border-radius: 6px;
+            font-size: 1rem;
+            outline: none;
+            transition: border 0.2s;
+        }
+        input[type="date"]:focus {
+            border-color: #6366f1;
+        }
+        button {
+            background: linear-gradient(90deg, #6366f1 60%, #818cf8 100%);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 0.7rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+            transition: background 0.2s, transform 0.2s;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #818cf8 60%, #6366f1 100%);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .fa-calendar-day, .fa-clock, .fa-calendar-plus, .fa-calendar-check, .fa-hourglass-half {
+            color: #6366f1;
+            font-size: 1.1em;
+        }
+        @media (max-width: 500px) {
+            .container { padding: 1.2rem 0.5rem; }
+            h1 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fa-solid fa-calendar-day"></i> Analyseur de Dates</h1>
+        <div class="results" id="mainResults">
+            <p><i class="fa-solid fa-clock"></i> <strong>Date et heure actuelles :</strong> <span id="currentDate"></span></p>
+            <p><i class="fa-solid fa-calendar-check"></i> <strong>Jour de la semaine :</strong> <span id="dayOfWeek"></span></p>
+            <p><i class="fa-solid fa-calendar-plus"></i> <strong>Date dans 7 jours :</strong> <span id="futureDate"></span></p>
+        </div>
+        <form id="dateForm">
+            <label for="inputDate"><i class="fa-solid fa-calendar"></i> Saisis une date :</label>
+            <input type="date" id="inputDate" required>
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> Analyser</button>
+        </form>
+        <div id="analysisResults" class="results"></div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const today = new Date();
+            const days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+            const currentDateEl = document.getElementById('currentDate');
+            const dayOfWeekEl = document.getElementById('dayOfWeek');
+            const futureDateEl = document.getElementById('futureDate');
+
+            currentDateEl.textContent = today.toLocaleString('fr-FR');
+            dayOfWeekEl.textContent = days[today.getDay()];
+            const future = new Date(today);
+            future.setDate(future.getDate() + 7);
+            futureDateEl.textContent = future.toLocaleDateString('fr-FR');
+
+            // Animation d'apparition des résultats
+            document.querySelectorAll('.results p').forEach((el, i) => {
+                el.style.opacity = 0;
+                setTimeout(() => {
+                    el.style.transition = "opacity 0.6s";
+                    el.style.opacity = 1;
+                }, 200 + i * 200);
+            });
+
+            // Gestion du formulaire
+            const form = document.getElementById('dateForm');
+            const inputDate = document.getElementById('inputDate');
+            const analysisResults = document.getElementById('analysisResults');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const value = inputDate.value;
+                if (!value) return;
+
+                const userDate = new Date(value);
+                const day = days[userDate.getDay()];
+                const month = userDate.getMonth() + 1;
+                const year = userDate.getFullYear();
+
+                // Calcul de la différence en jours
+                const todayMidnight = new Date();
+                todayMidnight.setHours(0,0,0,0);
+                const userDateMidnight = new Date(userDate);
+                userDateMidnight.setHours(0,0,0,0);
+                const diffTime = todayMidnight - userDateMidnight;
+                const diffDays = Math.round(Math.abs(diffTime) / (1000 * 60 * 60 * 24));
+
+                let msg = `<p><i class="fa-solid fa-calendar-check"></i> <strong>Jour :</strong> ${day}</p>`;
+                msg += `<p><i class="fa-solid fa-calendar"></i> <strong>Mois :</strong> ${month}</p>`;
+                msg += `<p><i class="fa-solid fa-calendar"></i> <strong>Année :</strong> ${year}</p>`;
+                msg += `<p><i class="fa-solid fa-hourglass-half"></i> <strong>Différence en jours avec aujourd'hui :</strong> ${diffDays} jour(s)</p>`;
+
+                analysisResults.innerHTML = msg;
+
+                // Animation d'apparition des résultats d'analyse
+                analysisResults.querySelectorAll('p').forEach((el, i) => {
+                    el.style.opacity = 0;
+                    setTimeout(() => {
+                        el.style.transition = "opacity 0.6s";
+                        el.style.opacity = 1;
+                    }, 100 + i * 180);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
