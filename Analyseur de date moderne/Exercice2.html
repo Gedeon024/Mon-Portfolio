@@ -11,9 +11,6 @@
             background: linear-gradient(135deg, #e0e7ff 0%, #f4f4f9 100%);
             min-height: 100vh;
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
         .container {
             background: #fff;
@@ -25,6 +22,12 @@
             text-align: center;
             position: relative;
             animation: fadeIn 1s;
+            /* Centrage vertical et horizontal */
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(30px);}
@@ -101,6 +104,16 @@
             .container { padding: 1.2rem 0.5rem; }
             h1 { font-size: 1.2rem; }
         }
+        footer {
+            width: 100%;
+            text-align: center;
+            background: #22223b;
+            color: #f4f4f9;
+            padding: 1rem 0 0.5rem 0;
+            font-size: 1rem;
+            margin-top: 2rem;
+            border-radius: 0 0 18px 18px;
+        }
     </style>
 </head>
 <body>
@@ -118,6 +131,10 @@
         </form>
         <div id="analysisResults" class="results"></div>
     </div>
+    <footer>
+        <p> © Tous droits réservés - 2025</p>
+        <p>Designed by Maurice with HTML, CSS, JS</p>
+    </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const today = new Date();
@@ -182,14 +199,6 @@
             });
         });
     </script>
-
-<footer>
-        <p> © Tous droits réservés - 2025</p>
-        <p>Designed by Maurice with HTML, CSS, JS</p>
-        
-    </footer>
-
-
-
 </body>
 </html>
+
