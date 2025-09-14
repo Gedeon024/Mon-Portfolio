@@ -12,7 +12,6 @@
     <header class="main-header">
         <a href="index.html" class="logo-link">
             <img src="images/Logo/Gemini_Generated_Image_r29xtur29xtur29x.png" alt="Logo de Gedev" class="logo-img">
-        
         </a>
         <nav class="main-nav">
             <ul class="nav-links">
@@ -105,27 +104,30 @@ Ce projet met en avant la maîtrise des technologies web : HTML, CSS moderne, 
 
         <section id="contact" class="contact-section">
             <h2>Vous avez un projet en tête ? N'hésitez pas à me contacter</h2>
-            <form id="contactForm">
+            <form action="https://formspree.io/f/xldwkrna" method="post">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="prenom">Votre prénom</label>
-                        <input type="text" id="prenom" name="prenom" required>
+                        <input type="text" id="prenom" name="Prénom" required autocomplete="given-name">
                     </div>
                     <div class="form-group">
                         <label for="nom">Votre nom</label>
-                        <input type="text" id="nom" name="nom" required>
+                        <input type="text" id="nom" name="Nom" required autocomplete="family-name">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="sujet">Votre sujet</label>
-                    <input type="text" id="sujet" name="sujet" required>
+                    <input type="text" id="sujet" name="Sujet" required autocomplete="on">
                 </div>
                 <div class="form-group">
                     <label for="message">Votre message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <textarea id="message" name="Message" rows="5" required autocomplete="off"></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Envoyer</button>
             </form>
+            <div id="confirmation-message" style="display:none; color:green; margin-top:1rem;">
+                Merci pour votre message ! Je vous répondrai rapidement.
+            </div>
         </section>
     </main>
 
@@ -135,27 +137,31 @@ Ce projet met en avant la maîtrise des technologies web : HTML, CSS moderne, 
     </footer>
     <script src="script.js"></script>
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-    let animated = false;
-    const skillsSection = document.querySelector('.skills-section');
-    const htmlBar = document.querySelector('.skill-bar-fill.html');
-    const cssBar = document.querySelector('.skill-bar-fill.css');
-    const jsBar = document.querySelector('.skill-bar-fill.js');
+        document.addEventListener('DOMContentLoaded', function() {
+            let animated = false;
+            const skillsSection = document.querySelector('.skills-section');
+            const htmlBar = document.querySelector('.skill-bar-fill.html');
+            const cssBar = document.querySelector('.skill-bar-fill.css');
+            const jsBar = document.querySelector('.skill-bar-fill.js');
 
-    if (skillsSection && htmlBar && cssBar && jsBar) {
-        const observer = new IntersectionObserver(function(entries) {
-            if (entries[0].isIntersecting && !animated) {
-                htmlBar.style.width = '90%';
-                cssBar.style.width = '80%';
-                jsBar.style.width = '70%';
-                animated = true;
-                observer.disconnect();
+            if (skillsSection && htmlBar && cssBar && jsBar) {
+                const observer = new IntersectionObserver(function(entries) {
+                    if (entries[0].isIntersecting && !animated) {
+                        htmlBar.style.width = '90%';
+                        cssBar.style.width = '80%';
+                        jsBar.style.width = '70%';
+                        animated = true;
+                        observer.disconnect();
+                    }
+                }, { threshold: 0.4 });
+
+                observer.observe(skillsSection);
             }
-        }, { threshold: 0.4 });
+        });
 
-        observer.observe(skillsSection);
-    }
-});
+        // Le script pour la confirmation du formulaire local a été retiré,
+        // car Formspree gère sa propre page de confirmation après soumission.
+        // Si vous souhaitez une confirmation sans redirection, il faudra utiliser une soumission AJAX.
     </script>
 </body>
 </html>
