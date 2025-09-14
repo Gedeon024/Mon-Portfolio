@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio - Contact</title>
     <meta name="description" content="Contactez Maurice Marcel D. Carvalho D'Alvarenga pour des collaborations de développement web. Vous pouvez me joindre par e-mail ou via le formulaire.">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         body {
-            background: linear-gradient(135deg, #e0e7ff 0%, #f4f4f9 100%);
+            background: linear-gradient(135deg, #e3f2fd 0%, #fffde7 100%);
             font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
-            color: #22223b;
+            color: #1a202c;
         }
         header {
-            background: #22223b;
+            background: #008000; /* Vert de la CEDEAO */
             padding: 1rem 0;
         }
         nav {
@@ -24,14 +23,14 @@
             gap: 2rem;
         }
         nav a {
-            color: #f4f4f9;
+            color: #ffffff;
             text-decoration: none;
             font-weight: 500;
             font-size: 1.1rem;
             transition: color 0.2s;
         }
         nav a:hover, nav a.active {
-            color: #4f8cff;
+            color: #FFD700; /* Or de la CEDEAO */
         }
         main {
             display: flex;
@@ -54,23 +53,23 @@
         h2 {
             grid-column: 1 / -1;
             text-align: center;
-            color: #22223b;
+            color: #1a202c;
             font-size: 2rem;
             margin-bottom: 0.5rem;
         }
         p {
-            color: #3b3b6d;
+            color: #4a5568;
         }
         .contact-infos {
-            background: #e0e7ff;
+            background: #e6ffe6; /* Vert clair de la CEDEAO */
             border-radius: 12px;
             padding: 1.5rem 1rem;
             margin-bottom: 1.5rem;
-            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.07);
+            box-shadow: 0 2px 8px rgba(0, 128, 0, 0.07);
         }
         .contact-infos h3 {
             margin-top: 0;
-            color: #22223b;
+            color: #1a202c;
             font-size: 1.2rem;
             margin-bottom: 1rem;
         }
@@ -82,22 +81,22 @@
             font-size: 1rem;
         }
         .contact-infos a {
-            color: #4f8cff;
+            color: #FFD700; /* Or de la CEDEAO */
             text-decoration: underline;
         }
         .contact-infos i {
-            color: #4f8cff;
+            color: #FFD700; /* Or de la CEDEAO */
             font-size: 1.1em;
         }
         .contact-form-container {
-            background: #f4f4f9;
+            background: #fffde6; /* Jaune clair de la CEDEAO */
             border-radius: 12px;
             padding: 1.5rem 1rem;
-            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.07);
+            box-shadow: 0 2px 8px rgba(255, 215, 0, 0.07);
         }
         .contact-form-container h3 {
             margin-top: 0;
-            color: #22223b;
+            color: #1a202c;
             font-size: 1.2rem;
             margin-bottom: 1rem;
         }
@@ -117,7 +116,7 @@
         }
         label {
             font-weight: 500;
-            color: #4f8cff;
+            color: #FFD700; /* Or de la CEDEAO */
             margin-bottom: 0.3rem;
         }
         input[type="text"], textarea {
@@ -127,18 +126,18 @@
             font-size: 1rem;
             outline: none;
             background: #fff;
-            color: #22223b; /* <-- Ajoute cette ligne */
+            color: #1a202c;
             transition: border 0.2s;
         }
         input[type="text"]:focus, textarea:focus {
-            border-color: #4f8cff;
+            border-color: #008000; /* Vert de la CEDEAO */
         }
         textarea {
             resize: vertical;
             min-height: 80px;
         }
         input[type="submit"] {
-            background: linear-gradient(90deg, #4f8cff 60%, #6366f1 100%);
+            background: linear-gradient(90deg, #008000 60%, #FFD700 100%); /* Vert et Or de la CEDEAO */
             color: #fff;
             border: none;
             border-radius: 6px;
@@ -146,15 +145,15 @@
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
-            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+            box-shadow: 0 2px 8px rgba(0, 128, 0, 0.08);
             transition: background 0.2s, transform 0.2s;
         }
         input[type="submit"]:hover {
-            background: linear-gradient(90deg, #6366f1 60%, #4f8cff 100%);
+            background: linear-gradient(90deg, #FFD700 60%, #008000 100%);
             transform: translateY(-2px) scale(1.03);
         }
         footer {
-            background: #22223b;
+            background: #008000; /* Vert de la CEDEAO */
             color: #f4f4f9;
             text-align: center;
             padding: 1.2rem 0 0.5rem 0;
@@ -166,6 +165,10 @@
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
                 padding: 2rem 0.5rem;
+            }
+            .form-row {
+                flex-direction: column;
+                gap: 1.2rem;
             }
         }
         @media (max-width: 600px) {
@@ -186,7 +189,8 @@
         <nav>
             <a href="index.html"><i class="fa-solid fa-house"></i> Accueil</a>
             <a href="mesprojets.html"><i class="fa-solid fa-diagram-project"></i> Projets</a>
-            <a href="contact.html" class="active"><i class="fa-solid fa-envelope"></i> Contact</a>
+            <a href="Cv en ligne.html"> <i class="fa-solid fa-file-lines"></i> Curriculum Vitae</a>
+            <a href="contact.html"> <i class="fa-solid fa-envelope"></i> Contact</a>
         </nav>
     </header>
 

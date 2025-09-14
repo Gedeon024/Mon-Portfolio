@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Portfolio - CV</title>
+  <meta name="description" content="Découvrez le profil professionnel de Gédéon Maurice Carvalho : formations, expériences et compétences en statistiques, data science et gestion de projets.">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Styles internes -->
+  <style>
+    body {
+      background: linear-gradient(135deg, #e3f2fd 0%, #fffde7 100%);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      color: #1a202c;
+    }
+
+    header {
+      background: #008000; /* Vert de la CEDEAO */
+      padding: 1rem 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #FFD700; /* Or de la CEDEAO */
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 80vh;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(60, 60, 120, 0.13);
+      padding: 2.5rem 2rem;
+      max-width: 900px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #008000;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      color: #1a202c;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    p,
+    li {
+      color: #4a5568;
+      line-height: 1.6;
+    }
+
+    .header-cv {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .header-cv h1 {
+      font-size: 3rem;
+      color: #008000;
+      margin: 0;
+    }
+
+    .header-cv p {
+      color: #4a5568;
+      margin: 0.5rem 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .header-cv a {
+      color: #1a202c;
+      text-decoration: none;
+    }
+
+    .header-cv a:hover {
+      color: #FFD700;
+    }
+
+    .cv-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2.5rem;
+    }
+
+    .cv-section {
+      background: #f4f4f9;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .cv-section-left {
+      background: #fffde6; /* Jaune clair de la CEDEAO */
+    }
+
+    .cv-section-right {
+      background: #e6ffe6; /* Vert clair de la CEDEAO */
+    }
+
+    .experience-item,
+    .education-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .experience-item h4,
+    .education-item h4 {
+      color: #000080;
+      margin: 0 0 0.2rem 0;
+      font-size: 1.1rem;
+    }
+
+    .experience-item p,
+    .education-item p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .experience-item ul,
+    .skill-list,
+    .interest-list {
+      padding-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .skill-list,
+    .interest-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skill-list li,
+    .interest-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-list i,
+    .interest-list i {
+      color: #008000;
+    }
+
+    footer {
+      background: #008000; /* Vert de la CEDEAO */
+      color: #f4f4f9;
+      text-align: center;
+      padding: 1.2rem 0 0.5rem 0;
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .cv-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 1rem 0.2rem;
+      }
+
+      section {
+        padding: 1.2rem 0.2rem;
+      }
+
+      .header-cv h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <a href="index.html"><i class="fa-solid fa-house"></i> Accueil</a>
+      <a href="mesprojets.html"><i class="fa-solid fa-diagram-project"></i> Projets</a>
+      <a href="Cv en ligne.html" class="active"><i class="fa-solid fa-file-lines"></i> Curriculum Vitae</a>
+      <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <section>
+      
+      <!-- HEADER CV -->
+      <div class="header-cv">
+        <h1>MAURICE M.D. CARVALHO D'ALVARENGA</h1>
+        <p>
+          <i class="fa-solid fa-location-dot"></i> Dakar, Sénégal
+          <span>|</span>
+          <i class="fa-solid fa-phone"></i> +221 70 116 13 55 / +221 77 605 22 18
+          <span>|</span>
+          <i class="fa-solid fa-envelope"></i>
+          <a href="contact.html">mauricemrcl@gmail.com</a>
+        </p>
+      </div>
+
+      <!-- CV GRID -->
+      <div class="cv-grid">
+        
+        <!-- LEFT COLUMN -->
+        <div class="cv-section cv-section-left">
+          <h3><i class="fa-solid fa-user"></i> Profil</h3>
+          <p>Jeune professionnel sénégalais passionné par les statistiques, la science des données et la gestion des risques climatiques, agricoles et économiques...</p>
+
+          <h3><i class="fa-solid fa-star"></i> Compétences Clés</h3>
+          <ul class="skill-list">
+            <li><i class="fa-solid fa-chart-line"></i> **Statistiques & Data Science**<br>Analyse et suivi d’indicateurs de performance (KPI). Bases en Python pour l’analyse de données.</li>
+            <li><i class="fa-solid fa-code"></i> **Développement numérique**<br>Développement web : HTML, CSS, notions JAVASCRIPT.</li>
+            <li><i class="fa-solid fa-clipboard-list"></i> **Gestion de projets**<br>Coordination de missions multilatérales. Méthodologies Agiles, Scrum, Lean.</li>
+            <li><i class="fa-solid fa-globe"></i> **Langues**<br>Français : langue maternelle<br>Anglais : courant<br>Portugais : notions</li>
+          </ul>
+
+          <h3><i class="fa-solid fa-seedling"></i> Centres d’intérêt</h3>
+          <ul class="interest-list">
+            <li>Statistiques et économie appliquée</li>
+            <li>Gestion des risques climatiques et agricoles</li>
+            <li>Innovation numérique au service des politiques publiques</li>
+            <li>Développement durable et résilience en Afrique</li>
+          </ul>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="cv-section cv-section-right">
+          <h3><i class="fa-solid fa-graduation-cap"></i> Formation & Certifications</h3>
+          
+          <div class="education-item">
+            <h4>Certificat – Data Science & Intelligence Artificielle</h4>
+            <p>DataCamp Donates x iSHEERO – En ligne / Bénin | 2025 – En cours</p>
+          </div>
+
+          <div class="education-item">
+            <h4>Coursera – Mathématiques pour la Data Science</h4>
+            <p>Duke University (Coursera) | Mai 2025</p>
+          </div>
+
+          <div class="education-item">
+            <h4>Certification – Gestion de Projet (IAHPO®)</h4>
+            <p>International Association for High Performance Organizations | Oct. 2022</p>
+          </div>
+
+          <div class="education-item">
+            <h4>Bachelor – Transport et Logistique</h4>
+            <p>SupDeco Dakar, Sénégal | 2021 – 2022</p>
+          </div>
+
+          <div class="education-item">
+            <h4>Licence 3 – Administration et Échanges Internationaux (AEI)</h4>
+            <p>Université Paris-Est Créteil, France | 2017 – 2020</p>
+          </div>
+
+          <h3><i class="fa-solid fa-briefcase"></i> Expérience Professionnelle</h3>
+          
+          <div class="experience-item">
+            <h4>Business Developer – Humanics Group, Sénégal</h4>
+            <p>Fév. 2025 – Aujourd’hui</p>
+            <ul>
+              <li>Coordination de missions multilatérales et "consultancies" via une plateforme digitale de consultants.</li>
+              <li>Vérification des profils, suivi des livrables et gestion des contrats.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h4>Assistant Chef de Projet – Pragmatic Solution SAS, France</h4>
+            <p>Mars 2023 – Sept. 2024</p>
+            <ul>
+              <li>Appui aux missions d’audit dans les secteurs Aéronautique, Défense et Ferroviaire.</li>
+              <li>Cartographie des processus et suivi d’indicateurs (KPI) dans une démarche ISO 9001.</li>
+              <li>Coordination de missions de conseil, enquêtes de satisfaction et reporting.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h4>Business Developer / Communication Digitale – Onyx Intelligence & Supply Africa</h4>
+            <p>Nov. 2024 – Déc. 2024</p>
+            <ul>
+              <li>Promotion d’un CRM (SYNCRO), veille stratégique et suivi de performance.</li>
+              <li>Développement de la stratégie digitale et mise en place de partenariats.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h4>Chargé de Recrutement – Pragmatic Solution SAS, France</h4>
+            <p>Nov. 2021 – Sept. 2022</p>
+            <ul>
+              <li>Sourcing de profils techniques, gestion de viviers de talents, coordination RH.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h4>Autres postes</h4>
+            <ul>
+              <li>Représentant technico-commercial – Le Solariste (France)</li>
+              <li>Assistant administratif & logistique – Université Paris-Est Créteil (France)</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© Tous droits réservés - 2025</p>
+    <p>Designed by Maurice with HTML, CSS, JS</p>
+  </footer>
+
+</body>
+</html>

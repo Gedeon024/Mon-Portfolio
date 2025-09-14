@@ -1,7 +1,7 @@
 /* ======================== Base Styles ======================== */
 body {
-    background-color: #f8f8f8;
-    color: #333;
+    background-color: #f0f0f0; /* Fond clair, proche du blanc CEDEAO */
+    color: #333; /* Texte sombre pour la lisibilité */
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -10,7 +10,7 @@ body {
 }
 
 h1, h2, h3 {
-    color: #1a1a1a;
+    color: #006633; /* Vert foncé CEDEAO pour les titres */
     font-weight: bold;
 }
 
@@ -39,7 +39,7 @@ section {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: #fff;
+    background-color: #fff; /* Blanc CEDEAO */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
@@ -52,12 +52,12 @@ section {
     gap: 12px;
     font-weight: bold;
     font-size: 1.5em;
-    color: #1a1a1a;
+    color: #006633; /* Vert foncé CEDEAO */
     text-decoration: none;
 }
 
 .logo-img {
-    width: 115px;    /* 2x plus grand que 48px */
+    width: 115px;
     height: 115px;
     object-fit: contain;
     border-radius: 50%;
@@ -72,14 +72,14 @@ section {
 }
 
 .nav-links a {
-    color: #555;
+    color: #555; /* Gris pour le texte de navigation non actif */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #00bfff;
+    color: #FFCC00; /* Jaune CEDEAO au survol */
 }
 
 /* ======================== Hero Section ======================== */
@@ -89,7 +89,7 @@ section {
     align-items: center;
     padding: 100px 50px;
     gap: 50px;
-    background-color: #f0f0f0;
+    background-color: #E6FFE6; /* Vert très clair pour la section héro */
 }
 
 .hero-content {
@@ -105,24 +105,24 @@ section {
     text-transform: none;
     padding: 12px 25px;
     border-radius: 50px;
-    background-color: #1a1a1a;
+    background-color: #006633; /* Vert foncé CEDEAO */
     color: #fff;
     font-weight: normal;
     transition: background-color 0.3s ease;
 }
 
 .hero-buttons .button:hover {
-    background-color: #00bfff;
+    background-color: #FFCC00; /* Jaune CEDEAO au survol */
 }
 
 .hero-buttons .secondary {
     background-color: transparent;
-    color: #1a1a1a;
-    border: 2px solid #1a1a1a;
+    color: #006633; /* Vert foncé CEDEAO */
+    border: 2px solid #006633; /* Vert foncé CEDEAO */
 }
 
 .hero-buttons .secondary:hover {
-    background-color: #1a1a1a;
+    background-color: #006633; /* Vert foncé CEDEAO */
     color: #fff;
 }
 
@@ -136,7 +136,7 @@ section {
 
 /* ======================== About Section ======================== */
 .about-section {
-    background-color: #fff;
+    background-color: #fff; /* Blanc CEDEAO */
 }
 
 .about-content {
@@ -147,7 +147,7 @@ section {
 
 /* ======================== Projects Section ======================== */
 .projects-section {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* Fond clair */
 }
 
 .projects-grid {
@@ -160,7 +160,7 @@ section {
 }
 
 .project-card {
-    background-color: #fff;
+    background-color: #fff; /* Blanc CEDEAO */
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -174,18 +174,18 @@ section {
 }
 
 .project-card h3 {
-    color: #00bfff;
+    color: #006633; /* Vert foncé CEDEAO */
 }
 
 .project-tags {
-    color: #aaa;
+    color: #aaa; /* Gris léger */
     font-size: 0.9em;
     font-style: italic;
 }
 
 /* ======================== Skills Section ======================== */
 .skills-section {
-    background-color: #fff;
+    background-color: #fff; /* Blanc CEDEAO */
 }
 
 .skills-grid {
@@ -207,7 +207,7 @@ section {
 }
 
 .skill-bar {
-    background-color: #ddd;
+    background-color: #ddd; /* Gris clair pour la barre vide */
     border-radius: 5px;
     height: 10px;
     overflow: hidden;
@@ -220,14 +220,15 @@ section {
     width: 0;
 }
 
-.skill-bar-fill.html { background-color: #E34F26; }
-.skill-bar-fill.css { background-color: #264DE4; }
-.skill-bar-fill.js { background-color: #F7DF1E; }
+/* Couleurs spécifiques aux barres de compétences (peut être conservé ou adapté) */
+.skill-bar-fill.html { background-color: #FFCC00; } /* Jaune CEDEAO */
+.skill-bar-fill.css { background-color: #006633; } /* Vert foncé CEDEAO */
+.skill-bar-fill.js { background-color: #CC0000; } /* Rouge CEDEAO */
 
 /* ======================== Contact Section ======================== */
 .contact-section {
-    background-color: #1a1a1a;
-    color: #fff;
+    background-color: #006633; /* Vert foncé CEDEAO pour le fond */
+    color: #fff; /* Texte blanc */
 }
 
 #contactForm {
@@ -249,9 +250,9 @@ input[type="text"], textarea {
     width: 100%;
     padding: 12px;
     margin-top: 8px;
-    border: 1px solid #555;
-    background-color: #333;
-    color: #fff;
+    border: 1px solid #FFCC00; /* Bordure jaune CEDEAO */
+    background-color: #004d26; /* Vert plus foncé pour le fond des champs */
+    color: #fff; /* Texte blanc dans les champs */
     border-radius: 5px;
 }
 
@@ -260,8 +261,8 @@ input[type="text"] {
 }
 
 .submit-btn {
-    background-color: #00bfff;
-    color: #1a1a1a;
+    background-color: #FFCC00; /* Jaune CEDEAO */
+    color: #006633; /* Texte vert foncé */
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
@@ -272,14 +273,15 @@ input[type="text"] {
 }
 
 .submit-btn:hover {
-    background-color: #0099cc;
+    background-color: #CC0000; /* Rouge CEDEAO au survol */
+    color: #fff; /* Texte blanc au survol */
 }
 
 /* ======================== Footer ======================== */
 footer {
     padding: 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: #006633; /* Vert foncé CEDEAO */
+    color: #fff; /* Texte blanc */
     text-align: center;
 }
 
@@ -301,5 +303,155 @@ footer {
     }
     .soft-skills, .hard-skills {
         min-width: auto;
+    }
+}
+
+/* --- SECTION ABOUT-ME NOUVEAUX STYLES --- */
+.about-section {
+    padding: 60px 20px;
+    background: linear-gradient(145deg, #e6ffe6 0%, #ffffff 100%); /* Dégradé vert clair vers blanc */
+    text-align: center;
+    overflow: hidden;
+}
+
+.about-header {
+    margin-bottom: 50px;
+}
+
+.about-section h2 {
+    font-size: 2.8rem;
+    color: #006633; /* Vert foncé CEDEAO */
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+.about-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #FFCC00; /* Jaune CEDEAO */
+    border-radius: 2px;
+}
+
+.about-section .tagline {
+    font-size: 1.5rem;
+    color: #333; /* Texte sombre pour la lisibilité */
+    max-width: 800px;
+    margin: 20px auto 0;
+    line-height: 1.6;
+}
+
+.about-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-card {
+    background: #ffffff; /* Blanc CEDEAO */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid #006633; /* Vert foncé CEDEAO */
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.about-card h3 {
+    color: #006633; /* Vert foncé CEDEAO */
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-card h3 i {
+    font-size: 1.8rem;
+    color: #006633; /* Vert foncé CEDEAO */
+}
+
+.about-card p {
+    color: #495057; /* Gris sombre pour le texte */
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.about-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-card ul li {
+    background: #f0fff0; /* Vert très très clair pour les listes */
+    padding: 10px 15px;
+    border-left: 4px solid #FFCC00; /* Jaune CEDEAO */
+    margin-bottom: 8px;
+    border-radius: 5px;
+    color: #343a40;
+    font-size: 1rem;
+}
+
+.about-card .call-to-action {
+    font-style: italic;
+    color: #CC0000; /* Rouge CEDEAO */
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.wide-card {
+    grid-column: 1 / -1;
+    background: linear-gradient(45deg, #006633, #004d26); /* Dégradé de verts CEDEAO */
+    color: #fff;
+    border-top: none;
+}
+
+.wide-card h3, .wide-card p, .wide-card .call-to-action {
+    color: #fff;
+}
+.wide-card h3 i {
+    color: #fff;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (min-width: 1024px) {
+    .about-content-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .wide-card {
+        grid-column: span 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section h2 {
+        font-size: 2.2rem;
+    }
+    .about-section .tagline {
+        font-size: 1.2rem;
+    }
+    .about-card h3 {
+        font-size: 1.4rem;
+    }
+    .about-content-grid {
+        grid-template-columns: 1fr;
+    }
+    .wide-card {
+        grid-column: 1 / -1;
     }
 }
